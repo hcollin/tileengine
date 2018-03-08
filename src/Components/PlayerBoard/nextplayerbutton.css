@@ -1,0 +1,10 @@
+
+.nextplayerbutton {
+    position: fixed;
+    top: 0;
+    left: calc(50% - 100px);
+
+    width: 200px;
+    height: 30px;
+
+}

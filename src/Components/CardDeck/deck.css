@@ -1,0 +1,41 @@
+
+.deck {
+    position: fixed;
+    left: 10px;
+    top: 250px;
+
+    width: calc(63px * 4);
+    height: calc(88px * 4);
+
+    border: solid 1px black;
+    box-shadow: 0 10px 3px 0 black;
+
+    border-radius: 8px;
+    background-color: black;
+
+    color: #444444;
+    text-align: center;
+}
+
+.deck h1.empty {
+    margin: 100px 0;
+    user-select: none;
+
+}
+
+.deckinfo {
+    position: absolute;
+    top: -24px;
+    right: 10px;
+    font-weight: normal;
+    font-size: 20px;
+    font-family: "Impact";
+
+    color: #666;
+}
+
+.deckinfo > .discard {
+    color: #999;
+    font-size: 14px;
+
+}

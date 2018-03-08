@@ -1,0 +1,34 @@
+
+.tile {
+    position: relative;
+    flex: 0 0 auto;
+    width: 20%;
+    height: 20%;
+    /*border: solid 1px black;*/
+}
+
+
+.tile > img {
+    width: 100%;
+    transition: transform 0.3s linear;
+}
+
+.tile > img.up {
+    transform: rotate(0deg);
+}
+
+.tile > img.down {
+    transform: rotate(180deg);
+}
+
+.tile > img.right {
+    transform: rotate(90deg);
+}
+
+.tile > img.left {
+    transform: rotate(270deg);
+}
+
+.tile > img.rotated {
+    border: solid 5px green;
+}

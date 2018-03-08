@@ -1,0 +1,173 @@
+
+.playerboard {
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+    width: 150px;
+    height: 200px;
+
+    justify-content: center;
+    align-items: center;
+
+
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.4);
+}
+
+.playerboard p {
+    margin: 6px 0;
+}
+
+.playerboard h1 {
+    font-size: 24px;
+    margin: 10px 0;
+    font-family: "Calibri";
+    color: #222222;
+    text-shadow: 0 3px 3px rgba(0,0,0,0.3);
+
+}
+
+.playerboard h1.active {
+
+}
+
+.playerboard h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #444444;
+}
+
+.playerboard.red {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    flex-direction: column-reverse;
+
+    background: linear-gradient(#ff8888 0%, #ffffff 100%);
+    border-top: solid 10px red;
+    border-bottom: solid 10px #EEDDDD;
+    border-bottom-right-radius: 100px 50px;
+}
+
+.playerboard.green {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    flex-direction: column-reverse;
+
+    background: linear-gradient(#88ff88 0%, #ffffff 100%);
+    border-top: solid 10px green;
+    border-bottom: solid 10px #DDEEDD;
+    border-bottom-left-radius: 100px 50px;
+}
+
+.playerboard.blue {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+
+    background: linear-gradient(#ffffff 0%, #8888ff 100%);
+    border-bottom: solid 10px blue;
+    border-top: solid 10px #DDDDEE;
+    border-top-right-radius: 100px 50px;
+}
+
+.playerboard.yellow {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    background: linear-gradient(#ffffff 0%, #ffff88 100%);
+    border-bottom: solid 10px yellow;
+    border-top: solid 10px #EEEEDD;
+    border-top-left-radius: 100px 50px;
+}
+
+.playerboard.active {
+    width: 160px;
+    height: 210px;
+    box-shadow: 0 0 30px 15px rgba(0,0,0,0.4);
+}
+
+.playerboard.active.red {
+    background: linear-gradient(#ff0000 0%, #ffffff 100%);
+}
+
+.playerboard.active.green {
+    background: linear-gradient(green 0%, #ffffff 100%);
+}
+.playerboard.active.blue {
+    background: linear-gradient(#ffffff 0%, blue 100%);
+}
+.playerboard.active.yellow {
+    background: linear-gradient(#ffffff 0%, yellow 100%);
+}
+
+.counter {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    border: solid 1px black;
+    border-radius: 6px;
+    height: 30px;
+    width: 120px;
+
+    margin: 10px;
+
+    background: linear-gradient(#888888 0%, #EEEEEE 50%, #888888 100%);
+    box-shadow: inset 0 0 5px 3px rgba(0,0,0,0.5);
+}
+
+
+.counter > .button {
+
+    flex: 0 0 auto;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    cursor:pointer;
+    user-select: none;
+}
+
+.counter > label {
+    position: absolute;
+    top: -14px;
+    left: 6px;
+
+    font-family: "Calibri";
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #444444;
+
+}
+
+.counter > .minus {
+    color:red;
+}
+
+.counter > .plus {
+    color: green;
+}
+
+.counter > .value {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 16px;
+    font-weight: bold;
+    color: #eeeeee;
+    user-select: none;
+
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 5px 2px rgba(0,0,0,0.2);
+}
+
