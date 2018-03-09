@@ -1,0 +1,149 @@
+
+@mixin SmallRoundButton() {
+
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  z-index: 100;
+  box-shadow: inset 0 0 10px 5px rgba(0,0,0,0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 100px;
+  font-weight: bold;
+  color: rgba(32,0,0,0.4);
+  overflow: hidden;
+
+  user-select: none;
+
+  transition: all 0.1s;
+
+  &:hover {
+    cursor:pointer;
+
+
+    height: 48px;
+    width: 48px;
+    border-radius: 24px;
+    font-size: 120px;
+  }
+
+  &:active {
+    cursor:pointer;
+
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    font-size: 70px;
+  }
+}
+
+@mixin MediumTextButton() {
+  border-radius: 10px;
+  z-index: 100;
+  box-shadow: inset 0 0 10px 5px rgba(0,0,0,0.3);
+
+  padding: 6px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  overflow: hidden;
+
+  user-select: none;
+
+  transition: all 0.1s;
+
+  &:hover {
+    cursor:pointer;
+  }
+
+  &:active {
+    cursor:pointer;
+    padding: 4px 8px;
+    margin: 1px 2px;
+
+  }
+}
+
+@mixin RedRoundButton() {
+
+  @include SmallRoundButton();
+
+  background: linear-gradient(#888 0%, #EEE 30%, #FFF 60%, #DDD 80%, #888 100%);
+  color: rgba(32,0,0,0.4);
+
+  &:hover {
+    background: linear-gradient(#977 0%, #FDD 30%, #FEE 60%, #ECC 80%, #977 100%);
+  }
+
+  &:active {
+    background: linear-gradient(#866 0%, #ECC 30%, #EDD 60%, #DBB 80%, #866 100%);
+  }
+}
+
+
+@mixin GreenRoundButton() {
+
+  @include SmallRoundButton();
+
+  background: linear-gradient(#888 0%, #EEE 30%, #FFF 60%, #DDD 80%, #888 100%);
+  color: rgba(0,32,0,0.4);
+
+  &:hover {
+    background: linear-gradient(#797 0%, #DFD 30%, #EFE 60%, #CEC 80%, #797 100%);
+  }
+
+  &:active {
+    background: linear-gradient(#686 0%, #CDC 30%, #DED 60%, #BDB 80%, #686 100%);
+  }
+}
+
+
+@mixin BlueRoundButton() {
+
+  @include SmallRoundButton();
+
+  background: linear-gradient(#888 0%, #EEE 30%, #FFF 60%, #DDD 80%, #888 100%);
+  color: rgba(0,0,32,0.4);
+
+  &:hover {
+    background: linear-gradient(#779 0%, #DDF 30%, #EEF 60%, #CCE 80%, #777 100%);
+  }
+
+  &:active {
+    background: linear-gradient(#668 0%, #CCD 30%, #DDE 60%, #BBD 80%, #668 100%);
+  }
+}
+
+
+@mixin GreenMediumButton() {
+
+  @include MediumTextButton();
+
+  background: linear-gradient(#797 0%, #DFD 30%, #EFE 60%, #CEC 80%, #797 100%);
+  color: rgba(0,32,0,0.8);
+
+  &:active {
+    background: linear-gradient(#686 0%, #CDC 30%, #DED 60%, #BDB 80%, #686 100%);
+  }
+
+}
+
+@mixin BlueMediumButton() {
+
+  @include MediumTextButton();
+
+  background: linear-gradient(#779 0%, #DDF 30%, #EEF 60%, #CCE 80%, #777 100%);
+  color: rgba(0,0,32,0.8);
+
+  &:active {
+    background: linear-gradient(#668 0%, #CCD 30%, #DDE 60%, #BBD 80%, #668 100%);
+  }
+
+}

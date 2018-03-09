@@ -1,0 +1,68 @@
+@import "../../generalstyles";
+
+.carddisplayer {
+  position: absolute;
+
+  top: calc(50% - 176px);
+  left: calc(50% - 126px);
+
+  z-index: 1000;
+
+
+  & > .container {
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 40px 20px rgba(0,0,0,0.5);
+
+
+    .actionbuttons {
+      margin-top: 10px;
+      display: flex;
+      flex-direction:row;
+      justify-content: flex-end;
+
+      & > * {
+        flex: 1;
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .flipbutton {
+          @include BlueMediumButton();
+        }
+
+        .selectbutton {
+          @include GreenMediumButton();
+        }
+      }
+
+
+    }
+
+    & > .closebutton {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+
+      @include RedRoundButton();
+
+      &:hover {
+        top: -24px;
+        right: -24px;
+      }
+
+      &:active {
+        top: -15px;
+        right: -15px;
+      }
+
+
+    }
+
+  }
+
+
+}

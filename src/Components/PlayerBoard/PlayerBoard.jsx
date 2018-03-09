@@ -1,7 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 
-import './playerboard.css';
+import './playerboard.scss';
 
 import GameStore from '../../Stores/GameStore';
 
@@ -43,16 +43,24 @@ export default class PlayerBoard extends React.Component {
         return(
             <div className={classes}>
 
-                {GameStore.isActivePlayer(this.props.player)
-                    ? (<h1 onClick={() => this.setAsActive()} className="active">{this.props.player.name}</h1>)
-                    : (<h1 onClick={() => this.setAsActive()}>{this.props.player.name}</h1>)}
+                <div className="vps">
+                    {this.props.player.vps}
+                </div>
+
+                <div className="playername">
+                    {GameStore.isActivePlayer(this.props.player)
+                        ? (<h1 onClick={() => this.setAsActive()} className="active">{this.props.player.name}</h1>)
+                        : (<h1 onClick={() => this.setAsActive()}>{this.props.player.name}</h1>)}
+
+                </div>
+
 
 
 
                 {/*<Counter value={this.props.player.resources} onPlus={() => this.addCube()} onMinus={() => this.removeCube()} label="Resource Cubes"/>*/}
-                <Counter value={this.props.player.vps} onPlus={() => this.addVp()} onMinus={() => this.removeVp()} label="Victory Points" />
+                {/*<Counter value={this.props.player.vps} onPlus={() => this.addVp()} onMinus={() => this.removeVp()} label="Victory Points" />*/}
 
-                <p>{this.props.player.cardsInHand.length} cards in hand</p>
+                {/*<p>{this.props.player.cardsInHand.length} cards in hand</p>*/}
             </div>
         );
     }

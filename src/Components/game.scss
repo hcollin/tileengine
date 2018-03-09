@@ -1,0 +1,126 @@
+
+@import "../variables";
+
+.activeplayer {
+    font-size: 32px;
+    color: #444444;
+    position: relative;
+    text-align: center;
+    font-family: $mainFont;
+    font-weight: normal;
+}
+
+
+.game {
+
+
+    &.layout {
+
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        min-height: 100vh;
+
+        display: flex;
+        flex-direction: row;
+
+        border: solid 1px black;
+
+        & > .layout-left {
+            position: relative;
+            flex: 4 4 auto;
+            display: flex;
+            flex-direction: column;
+
+            max-height: 100vh;
+
+
+
+            z-index: 10;
+
+            & > .layout-gametable {
+                position: relative;
+                flex: 1 1 auto;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: white;
+                z-index: 12;
+            }
+
+            & > .layout-hand {
+                flex: 0 0 auto;
+                height: 100px;
+                z-index: 20;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+
+
+                box-shadow: 0 0 20px 10px rgba(0,0,0,0.3);
+
+
+            }
+
+        }
+
+        & > .layout-right {
+            flex: 2 2 auto;
+            min-width: 220px;
+
+            display: flex;
+            flex-direction: column;
+            z-index: 20;
+            background-color: white;
+            box-shadow: 0 0 20px 10px rgba(0,0,0,0.3);
+
+            & > .layout-title {
+                flex: 0 0 auto;
+                height: 60px;
+            }
+
+            & > .layout-players {
+                flex: 0 0 auto;
+                height: 320px;
+            }
+
+            & > .layout-deck {
+                flex: 0 0  auto;
+                height: 200px;
+            }
+
+            & > .layout-console {
+                flex: 1 1 auto;
+                min-height: 100px;
+            }
+
+            & > .layout-actions {
+                flex: 0 0 auto;
+                height: 120px;
+            }
+
+        }
+
+        & > .layout-modal {
+            position: absolute;
+
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            display: none;
+
+            z-index: 1000;
+
+            &.visible {
+                display: block;
+            }
+        }
+
+
+    }
+}
+

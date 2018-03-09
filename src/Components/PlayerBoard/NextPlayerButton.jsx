@@ -4,7 +4,7 @@ import {observer} from 'mobx-react';
 
 import Actions from '../../Stores/Actions';
 
-import "./nextplayerbutton.css";
+import "./nextplayerbutton.scss";
 
 @observer
 export default class NextPlayerButton extends React.Component {

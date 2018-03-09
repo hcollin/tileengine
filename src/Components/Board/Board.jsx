@@ -5,7 +5,7 @@ import { observer } from 'mobx-react';
 import Tile from './Tile';
 import InputOutput from './InputOutput';
 
-import './board.css';
+import './board.scss';
 
 import BoardStore from '../../Stores/BoardStore';
 import Actions from '../../Stores/Actions';

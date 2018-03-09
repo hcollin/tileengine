@@ -35,10 +35,10 @@ class GameStore {
         this.board.generateBoard();
         this.deck = new DeckStore();
         this.deck.generateDefaultDeck();
-        this.slots.setCardToSlot("top", 2, this.deck.drawCard());
-        this.slots.setCardToSlot("bottom", 2, this.deck.drawCard());
-        this.slots.setCardToSlot("left", 2, this.deck.drawCard());
-        this.slots.setCardToSlot("right", 2, this.deck.drawCard());
+        // this.slots.setCardToSlot("top", 2, this.deck.drawCard());
+        // this.slots.setCardToSlot("bottom", 2, this.deck.drawCard());
+        // this.slots.setCardToSlot("left", 2, this.deck.drawCard());
+        // this.slots.setCardToSlot("right", 2, this.deck.drawCard());
 
     }
 
